@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="keywords" content="Onepage Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design">
+  <script type="application/x-javascript">
+    addEventListener("load", function() {
+      setTimeout(hideURLbar, 0);
+    }, false);
+
+    function hideURLbar() {
+      window.scrollTo(0, 1);
+    }
+  </script>
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles2.css">
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="css/style.css" rel="stylesheet" type="text/css" media="all">
+  <link rel="stylesheet" href="style1.css">
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/move-top.js"></script>
+  <script type="text/javascript" src="js/easing.js"></script>
+  <script type="text/javascript">
+    jQuery(document).ready(function($) {
+      $(".scroll").click(function(event) {
+        event.preventDefault();
+        $('html,body').animate({
+          scrollTop: $(this.hash).offset().top
+        }, 1300);
+      });
+    });
+  </script>
+  <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script>
+    var current = 0;
+    var imagenes = new Array();
+    $(document).ready(function() {
+      var numImages = 4;
+      if (numImages <= 3) {
+        $('.right-arrow').css('display', 'none');
+        $('.left-arrow').css('display', 'none');
+      }
+      $('.left-arrow').on('click', function() {
+        if (current > 0) {
+          current = current - 1;
+        } else {
+          current = numImages - 3;
+        }
+        $(".carrusel").animate({
+          "left": -($('#product_' + current).position().left)
+        }, 600);
+        return false;
+      });
+      $('.left-arrow').on('hover', function() {
+        $(this).css('opacity', '0.5');
+      }, function() {
+        $(this).css('opacity', '1');
+      });
+      $('.right-arrow').on('hover', function() {
+        $(this).css('opacity', '0.5');
+      }, function() {
+        $(this).css('opacity', '1');
+      });
+      $('.right-arrow').on('click', function() {
+        if (numImages > current + 3) {
+          current = current + 1;
+        } else {
+          current = 0;
+        }
+        $(".carrusel").animate({
+          "left": -($('#product_' + current).position().left)
+        }, 600);
+        return false;
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <header>
+    <div class="header" id="head" style="">
+      <div class="container">
+        <div class="header-top">
+          <div class="top-menu">
+            <span class="menu"> </span>
+            <ul>
+              <nav class="cl-effect-5">
+                <li><a href="index.html" class="active"><span data-hover="Home" class="text-capitalize">Home</span></a></li>
+                <li><a href="Log-in-form/Login.html" class="active"><span data-hover="Login" class="text-capitalize">Login</span></a></li>
+                <li><a href="Registration-form/REG.html" class="active"><span data-hover="Registro" class="text-capitalize"><span>Registro</span></span></a></li>
+                <li><a class="active" href="planes/planes.html"><span data-hover="Planes" class="text-capitalize">Planes</span></a></li>
+              </nav>
+            </ul>
+          </div>
+        </div>
+        <div class="row" style="">
+          <div class="col-md-8 align-items-end flex-column-reverse w-25   offset-md-2" style="text-shadow: black 30px 30px 4px; box-shadow: black 0px 0px 4px;"><img src="images/logo.png" class="float-right m-0 ml-5 pl-4 pr-5" style="">/div&gt; </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!--script-nav-->
+  <script>
+    $("span.menu").click(function() {
+      $(".top-menu ul").slideToggle("slow", function() {});
+    });
+  </script>
+  <div class="clearfix"></div>
+  <div class="index-banner">
+    <div class="wmuSlider example1">
+      <div class="wmuSliderWrapper">
+        <article style="position: absolute; width: 100%; opacity: 0;">
+          <div class="banner-wrap">
+            <div class="banner_center">
+              <h1>Propiedades</h1>
+              <h2></h2>
+              <div>
+                <a href="busqueda/busqueda.html" class="btnSlider">Búsqueda</a>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article style="position: relative; width: 100%; opacity: 1;">
+          <div class="banner-wrap" style="">
+            <div class="banner_center">
+              <h1>TEXTO</h1>
+              <h2></h2>
+              <div>
+                <a href="#" class="btnSlider">Next</a>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article style="position: absolute; width: 100%; opacity: 0;">
+          <div class="banner-wrap">
+            <div class="banner_center">
+              <h1>TEXTO</h1>
+              <h2></h2>
+              <div>
+                <a href="#" class="btnSlider">Next</a>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+    <script src="js/jquery.wmuSlider.js"></script>
+    <script>
+      $('.example1').wmuSlider();
+    </script>
+  </div>
+  <div style="altura: 500px; height: 100px;background:rgb(124,124,124)">
+    <div class="arrow1">
+      <a href="#work" class="scroll"><img src="images/arrow1.png" alt=""></a>
+    </div>
+  </div>
+  <!-- about-section-ends -->
+  <div class="works-section" id="work">
+    <div class="works-header">
+      <a style="text-decoration:none">
+        <font color="white" style="">Busca tu Inmobiliaria</font>
+      </a>
+    </div>
+    <div class="row">
+      <div id="content" class="col-lg-12">
+        <div id="carrusel" class="w-100">
+          <a href="#" class="left-arrow"><img src="images/left-arrow.png"></a>
+          <a href="#" class="right-arrow"><img src="images/right-arrow.png"></a>
+          <div class="carrusel">
+            <div class="product" id="product_0">
+              <img src="gallery/01.jpg" width="200" height="200">
+            </div>
+            <div class="product" id="product_1">
+              <img src="gallery/02.jpg" width="200" height="200">
+            </div>
+            <div class="product" id="product_2">
+              <img src="gallery/03.jpg" width="200" height="200">
+            </div>
+            <div class="product" id="product_3">
+              <img src="gallery/01.jpg" width="200" height="200">
+            </div>
+            <div class="product" id="product_4">
+              <img src="gallery/02.jpg" width="200" height="200">
+            </div>
+            <div class="product" id="product_5">
+              <img src="gallery/03.jpg" width="200" height="200">
+            </div>
+            <div class="product" id="product_6">
+              <img src="gallery/04.jpg" width="200" height="200">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12">
+      <script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <!-- Bloque de anuncios adaptable -->
+      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6676636635558550" data-ad-slot="8523024962" data-ad-format="auto" data-full-width-responsive="true"></ins>
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
+  </div>
+  <!-- services-section-ends -->
+  <div style="altura: 500px; height: 400px;background:black">
+    <div class="contact-header">
+      <p></p>
+      <a href="#">
+        <font color="white"> CONTACTO</font>
+      </a>
+      <p></p>
+      <p style="	text-shadow: 0px 0px 4px black;	box-shadow: 0px 0px 4px  black;">Derechos de Privacidad</p>
+    </div>
+  </div>
+  
+</body>
+
+</html>
